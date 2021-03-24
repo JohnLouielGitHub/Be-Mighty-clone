@@ -301,7 +301,7 @@
 .rate {
   float: left;
   width: 100%;
-  height: 46px;
+  height: 16px;
   padding: 0 10px;
 }
 .rate:not(:checked) > input {
@@ -314,7 +314,7 @@
   overflow:hidden;
   white-space:nowrap;
   cursor:pointer;
-  font-size:30px;
+  font-size:14px;
   color:#ccc;
 }
 .rate:not(:checked) > label:before {
@@ -358,9 +358,30 @@
   height: 450px;
 }
 .img-pad,
- h3, 
+ #sect-2 h3, 
  #sect-2 p{
   padding-left: 10px;
   padding-right: 10px;
-  
+}
+.content{
+  width: 100%;
+  max-width: 750px;
+}
+.date{
+  color: gray;
+}
+.content .address{
+  color: gray;
+}
+.actions img{
+  width: 30px;
+  height: 25px;
+}
+.div-top{
+  content: "";
+  font-size: 16px;
+  border-top: 1px solid black;
+  width: 100%;
+  margin-top: 16px;
+  padding-bottom: 16px;
 }
