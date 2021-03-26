@@ -9,8 +9,6 @@
 .container {
   overflow: hidden;
   width: 100%;
-  /* max-width: 1100px;
-  margin: 0 auto; */
 }
 .container-fluid{
   width: 100%;
@@ -25,6 +23,7 @@
 /* column */
 .column {
   width: 100%;
+  display: block;
 }
 .con-center{
   max-width: 1100px;
@@ -48,7 +47,7 @@
   justify-content: center;
 }
 .flex-wrap {
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .flex-between {
   justify-content: space-between;
@@ -69,16 +68,25 @@
 .f-row-reverse{
   flex-direction: row-reverse;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .align-items-center {
     align-items: center;
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .flex-row {
     display: flex;
     flex-direction: row;
   }
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-item{
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
 }
 .flex-row-force {
   display: flex;
@@ -90,10 +98,6 @@
 }
 .margin-15b{
   margin-bottom: 15px;
-}
-#sect-1{
-  margin-top: 80px;
-  margin-bottom: 80px;
 }
 
 /* sm */
@@ -293,6 +297,31 @@
     width: calc (100%/12 * 12);
   }
 }
+.btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #BFFCFF;
+  border: 1px solid #BFFCFF;
+  background-color: transparent;
+  font-weight: 600;
+  width: 150px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  letter-spacing: .03125em;
+  padding: .6875rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 4px;
+  outline: none;
+}
+.btn:hover{
+  background-color: #86eef37a;
+}
 /* Rating codepen */
 *{
   margin: 0;
@@ -321,47 +350,91 @@
   content: '★ ';
 }
 .rate > input:checked ~ label {
-  color: #ffc700;    
+  color: skyblue;    
 }
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
-  color: #deb217;  
+  color: skyblue;  
 }
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
-  color: #c59b08;
+  color: black;
 }
 /* Rating codepen-end */
 .pos-relative{
   position: relative;
 }
+.pos-absolute{
+  position: absolute;
+}
+.hero-content{
+  top: 0;
+  left: 0;
+  transform: translateX(50%) translateY(50%);
+  padding: 25px;
+  margin-top: 60px;
+}
 .hero-bg{
   width: 100%;
-  height: 770px;
+  height: 100%;
+  min-height: 300px;
   background-image: url(../img/heroBanner_1728x.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (min-width: 576px){
+  .hero-bg{
+    width: 100%;
+    height: 100%;
+    min-height: 570px;
+    background-image: url(../img/heroBanner_1728x.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (min-width: 768px){
+  .hero-bg{
+    width: 100%;
+    height: 100%;
+    min-height: 770px;
+    background-image: url(../img/heroBanner_1728x.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 .contain-logo{
   width: 232px;
   height: 132px;
+}
+.logo{
+  background-position: center center;
+  background-size: cover;
 }
 .underline{
   text-decoration: underline;
 }
 .img-fit{
-  width: 350px;
+  width: 100%;
+  min-width: 300px;
   height: 450px;
 }
+.gallery-info{
+  margin-top: 20px;
+}
+.img-fit-album{
+  width: 100%;
+  min-width: 200px;
+}
 .img-pad,
- #sect-2 h3, 
- #sect-2 p{
-  padding-left: 10px;
-  padding-right: 10px;
+ #sect-2 #sect-4 h3, 
+ #sect-2 #sect-4 p{
+  padding: 0 10px;
 }
 .content{
   width: 100%;
@@ -385,3 +458,38 @@
   margin-top: 16px;
   padding-bottom: 16px;
 }
+#sect-4{
+  color: #BFFCFF;
+  background: #2E4154;
+}
+#sect-1,
+#sect-2,
+#sect-3,
+#sect-4,
+#sect-5{
+  margin-bottom: 40px;
+  min-height: 600px;
+}
+#sect-1,
+#sect-2,
+#sect-3,
+#sect-4,
+#sect-5{
+  border: 2px solid green;
+  margin-top: 40px;
+}
+#sect-4 h3, #sect-4 p{
+  min-width: 188px;
+  padding: 10px 10px;
+  width: 100%;
+  height: 100%;
+}
+.quote{
+  min-width: 300px;
+}
+.quote-img{
+  margin: 0 auto;
+  width: 300px;
+  height: 18px;
+}
+
