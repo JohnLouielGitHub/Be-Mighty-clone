@@ -9,20 +9,11 @@
 * {
   font-family: "Anonymous Pro", monospace;
 }
-/* h1{
-  font-size: 5em;
-}
-h2{
-  font-size: 44.5px;
-}
-h3{
-  font-size: 2em;
-} */
 
 a{
   text-decoration: none;
 }
-:root {
+/* :root {
   font-size: 16px;
 }
 
@@ -35,7 +26,7 @@ a{
   :root {
     font-size: 18px;
   }
-}
+} */
 
 /* container */
 .container {
@@ -62,6 +53,7 @@ a{
 }
 .con-center {
   max-width: 1100px;
+  max-height: 900px;
   margin: 0 auto;
 }
 .col-center {
@@ -339,6 +331,32 @@ a{
     width: calc (100%/12 * 12);
   }
 }
+.btn-hero {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  letter-spacing: 0.03125em;
+  padding: 0.6875rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 4px;
+  outline: none;
+}
+.btn-hero:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
 .btn {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -393,10 +411,6 @@ a{
 }
 
 /* Rating codepen */
-* {
-  margin: 0;
-  padding: 0;
-}
 .rate {
   float: left;
   width: 100%;
@@ -441,11 +455,40 @@ a{
   position: absolute;
 }
 .hero-content {
-  top: 0;
+  width: 360px;
+  height: 300px;
   left: 0;
-  transform: translateX(50%) translateY(50%);
+  /* transform: translateX(50%) translateY(50%); */
   padding: 25px;
-  margin-top: 60px;
+  margin-top: 150px;
+  margin-bottom: 90px;
+}
+h1{
+  color: white;
+  font-size: 45px;
+  text-align: left;
+}
+h2{
+  color: black;
+  font-size: 30px;
+  text-align: left;
+  line-height: 65px;
+}
+@media (min-width: 768px){
+  h2{
+    color: black;
+    font-size: 60px;
+    text-align: left;
+    line-height: 65px;
+  }
+}
+h6{
+  color: white;
+  font-size: 15px;
+}
+.wh100{
+  width: 100%;
+  height: 100%;
 }
 .hero-bg {
   width: 100%;
@@ -478,24 +521,74 @@ a{
     background-size: cover;
   }
 }
-.contain-logo {
-  width: 232px;
-  height: 132px;
+.contain-logo{
+  width: 300px;
+  height: 150px;
 }
 .logo {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/logo-spotify-amazonmusic-stacked.svg);
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#sect-1 .title{
+  font-size: 65px;
+  line-height: 65px;
+  color: #242a36;
+}
+#sect-1 .subtitle{
+  font-size: 20px;
+  line-height: 20px;
+  color: #242a36;
+}
+@media (max-width: 576px){
+  #sect-1 .title{
+    font-size: 35px;
+    line-height: 35px;
+    color: #242a36;
+  }
+  #sect-1 .subtitle{
+    font-size: 15px;
+    line-height: 15px;
+    color: #242a36;
+  }
+}
+#sect-2 h3{
+  font-size: 24px;
+}
+#sect-2 p{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 75px;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-right: 50px;
+  color: #242a36;
 }
 .underline {
   text-decoration: underline;
 }
+.content-ratings{
+  max-width: 300px;
+}
+.img-gif{
+  max-width: 200px;
+  max-height: 200px;
+}
 .img-fit {
-  width: 100%;
-  min-width: 300px;
+  /* width: 100%; */
+  min-width: 360px;
+  min-height: 300px;
   height: 450px;
 }
 .gallery-info {
+  position: relative;
   margin-top: 20px;
+  min-width: 360px;
+  min-height: 130px;
 }
 .img-fit-album {
   width: 100%;
@@ -504,7 +597,8 @@ a{
 .img-pad,
 #sect-2 #sect-4 h3,
 #sect-2 #sect-4 p {
-  padding: 0 10px;
+  font-size: 24px;
+  padding: 20px 10px;
 }
 #sect-6 .community{
   padding: 25px;
@@ -553,9 +647,10 @@ a{
 #sect-3,
 #sect-4,
 #sect-5,
-#sect-6 {
+#sect-6,
+#sect-7 {
   margin-bottom: 40px;
-  min-height: 600px;
+  min-height: 800px;
 }
 #sect-1,
 #sect-2,
@@ -563,7 +658,6 @@ a{
 #sect-4,
 #sect-5,
 #sect-6 {
-  border: 2px solid green;
   margin-top: 40px;
 }
 #sect-4 h3,
@@ -613,7 +707,7 @@ a{
 }
 
 /* Footer */
-ul, h3{
+ul, #sect-8 h3{
   list-style-type: none;
   text-align: left;
 }
@@ -641,4 +735,8 @@ li{
 .w200{
   width: 100%;
   min-width: 180px;
+}
+.h200{
+  height: 100%;
+  min-height: 700px;
 }
