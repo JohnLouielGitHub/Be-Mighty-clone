@@ -13,21 +13,6 @@
 a {
   text-decoration: none;
 }
-/* :root {
-  font-size: 16px;
-}
-
-@media (min-width: 400px) and (max-width: 1200px) {
-  :root {
-    font-size: calc(16px + (18 - 16) * ((100vw - 400px) / (1200 - 400)));
-  }
-}
-@media (min-width: 1200px) {
-  :root {
-    font-size: 18px;
-  }
-} */
-
 /* container */
 .container {
   overflow: hidden;
@@ -140,6 +125,11 @@ a {
 }
 
 /* sm */
+@media (min-width: 250px){
+  .col-sp-6{
+    width: calc(100% / 12 * 6);
+  }
+}
 @media (min-width: 576px) {
   .col-sm-12 {
     width: calc(100% / 12 * 12);
