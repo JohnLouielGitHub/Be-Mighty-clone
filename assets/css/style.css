@@ -464,10 +464,13 @@ h1 {
   font-size: 45px;
   text-align: left;
 }
+#sect-4 h2{
+  text-align: left;
+}
 h2 {
   color: black;
-  font-size: 30px;
-  text-align: left;
+  font-size: 60px;
+  text-align: center;
   line-height: 65px;
 }
 @media (min-width: 768px) {
@@ -529,6 +532,7 @@ h6 {
   background-repeat: no-repeat;
 }
 #sect-1 .title {
+  text-align: left;
   font-size: 65px;
   line-height: 65px;
   color: #242a36;
@@ -551,9 +555,11 @@ h6 {
   }
 }
 #sect-2 h3 {
+  padding: 5px;
   font-size: 22px;
 }
 #sect-2 p {
+  padding: 5px;
   font-size: 18px;
   margin-top: 20px;
   margin-right: 50px;
@@ -578,23 +584,24 @@ h6 {
   max-height: 200px;
 }
 .img-fit {
-  /* width: 100%; */
   width: 100%;
+  max-width: 400px;
   min-height: 300px;
   height: 450px;
 }
 .gallery-info {
   margin-top: 20px;
+  max-width: 400px;
   width: 100%;
 }
 .img-fit-album {
   width: 100%;
+  max-width: 300px;
   object-fit: cover;
 }
 .img-pad,
 #sect-2 #sect-4 h3,
 #sect-2 #sect-4 p {
-  font-size: 24px;
   padding: 20px 10px;
 }
 #sect-6 .community {
@@ -830,11 +837,10 @@ option {
 }
 #sect-4 h3,
 #sect-4 p {
-  min-width: 188px;
-  padding: 10px 10px;
-  width: 100%;
-  height: 100%;
+  padding: 10px 0;
+  height: min-content;
 }
+#sect-5
 #sect-6 {
   background-color: #dde1eb;
 }
@@ -843,8 +849,15 @@ option {
   line-height: 25px;
   width: 300px;
 }
+@media (max-width: 768px){
+  .quote{
+    margin: 0 auto;
+  }
+  .img-blk{
+    margin: 0 auto;
+  }
+}
 .quote-img {
-  margin: 0 auto;
   width: 300px;
   height: 18px;
 }
