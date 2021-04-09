@@ -12,6 +12,7 @@
 
 a {
   text-decoration: none;
+  color: #afb7c7;
 }
 /* container */
 .container {
@@ -557,11 +558,13 @@ h6 {
     color: #242a36;
   }
 }
-#sect-2 h3 {
+#sect-2-1 h3,
+#sect-2-2 h3 {
   padding: 10px;
   font-size: 22px;
 }
-#sect-2 p {
+#sect-2-1 p,
+#sect-2-2 p {
   padding: 10px;
   font-size: 18px;
   margin-top: 20px;
@@ -604,8 +607,10 @@ h6 {
   object-fit: cover;
 }
 .img-pad,
-#sect-2 h3,
-#sect-2 p {
+#sect-2-1 h3,
+#sect-2-1 p,
+#sect-2-2 h3,
+#sect-2-2 p {
   padding: 20px 10px;
 }
 #sect-6 .community {
@@ -824,13 +829,15 @@ option {
   background: #242a36;
 }
 #sect-1,
-#sect-2,
+#sect-2-1,
+#sect-2-2,
 #sect-4,
 #sect-5{
   margin-bottom: 40px;
 }
 #sect-1,
-#sect-2,
+#sect-2-1,
+#sect-2-2,
 #sect-4,
 #sect-5,
 #sect-6 {
@@ -898,7 +905,6 @@ li {
   margin-bottom: 5px;
 }
 .footer-logo {
-  background-image: url(../img/m-logo-mwave.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
